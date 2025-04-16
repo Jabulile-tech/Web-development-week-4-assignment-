@@ -1,0 +1,371 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: hsl(47, 97%, 55%);
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #5e2a07;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #fefcfb;
+    color: rgb(124, 69, 7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #9c633d;
+}
+
+/* Menu section */
+.menu {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #d35400;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    padding-bottom: 1rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    padding: 1rem;
+    color: #d35400;
+}
+
+.menu-item p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.menu-item .price {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 1.2rem;
+}
+
+.combo-options {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.combo-title {
+    font-weight: bold;
+    color: #5e2a07;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.combo-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.combo-price {
+    color: #9c633d;
+    font-weight: bold;
+}
+
+/* Drinks Menu */
+.drinks-menu {
+    padding: 4rem 2rem;
+    background-color: #fefcfb;
+}
+
+.drinks-menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #5e2a07;
+}
+
+.drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.drink-category {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.drink-category h3 {
+    color: #5e2a07;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 0.5rem;
+}
+
+.drink-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.drink-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.drink-item .price {
+    color: #9c633d;
+    font-weight: bold;
+}
+
+/* Content section */
+.content {
+    display: flex;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article {
+    flex: 2;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    color: #d35400;
+    margin-bottom: 1rem;
+}
+
+aside {
+    flex: 1;
+    background-color: #f1c40f;
+    padding: 2rem;
+    border-radius: 10px;
+    color: #333;
+}
+
+.offers {
+    list-style: none;
+}
+
+.offers li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.offers li::before {
+    content: "•";
+    color: #d35400;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #663a08;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #f1c40f;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #555;
+}
+
+/* Media Queries */
+/* Tablet */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .drinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .drinks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .combo-options {
+        padding: 0 0.5rem;
+    }
+}
